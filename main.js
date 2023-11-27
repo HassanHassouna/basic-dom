@@ -38,7 +38,18 @@ const moveDown = function () {
     }
 };
 
-downArrow.addEventListener("click", moveDown);
-upArrow.addEventListener("click", moveUp);
-leftArrow.addEventListener("click", moveLeft);
-rightArrow.addEventListener("click", moveRight);
+
+document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowUp") {
+        moveUp(e);
+    }
+    if (e.key === "ArrowDown") {
+        moveDown(e);
+    }
+    if (e.key === "ArrowLeft") {
+        moveLeft(e);
+    }
+    if (e.key === "ArrowRight") {
+        moveRight(e);
+    }
+});
